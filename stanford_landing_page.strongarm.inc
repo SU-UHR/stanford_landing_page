@@ -115,6 +115,9 @@ function stanford_landing_page_strongarm() {
       'stanford_callout_block' => array(
         'custom_settings' => TRUE,
       ),
+      's_caw_carousel' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -137,7 +140,7 @@ function stanford_landing_page_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -164,16 +167,16 @@ function stanford_landing_page_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '11',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '9',
+          'weight' => '10',
         ),
       ),
       'display' => array(),
@@ -184,9 +187,21 @@ function stanford_landing_page_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_stanford_landing_page';
+  $strongarm->value = '0';
+  $export['language_content_type_stanford_landing_page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_stanford_landing_page';
   $strongarm->value = array(
     0 => 'main-menu',
+    1 => 'benefits--rwards',
+    2 => 'faculty-staff-help-center',
+    3 => 'learn--grow',
+    4 => 'manage--lead',
+    5 => 'welcome-center',
   );
   $export['menu_options_stanford_landing_page'] = $strongarm;
 

@@ -55,7 +55,7 @@ function stanford_landing_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Lead text styles',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_s_landing_page_lead_text',
     ),
@@ -78,6 +78,70 @@ function stanford_landing_page_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_lead_text_styles|node|stanford_landing_page|full';
+  $field_group->group_name = 'group_lead_text_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_landing_page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Lead text styles',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_s_landing_page_lead_text',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Lead text styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'summary',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_lead_text_styles|node|stanford_landing_page|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_link_styles|field_collection_item|field_landing_page_item|numbered_guide';
+  $field_group->group_name = 'group_link_styles';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_landing_page_item';
+  $field_group->mode = 'numbered_guide';
+  $field_group->parent_name = 'group_numbered_guide';
+  $field_group->data = array(
+    'label' => 'Link Styles',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_s_lp_item_link',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Link Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'more-link',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_link_styles|field_collection_item|field_landing_page_item|numbered_guide'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_numbered_guide|field_collection_item|field_landing_page_item|numbered_guide';
   $field_group->group_name = 'group_numbered_guide';
   $field_group->entity_type = 'field_collection_item';
@@ -89,8 +153,8 @@ function stanford_landing_page_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_s_lp_item_description',
-      1 => 'field_s_lp_item_link',
-      2 => 'group_title',
+      1 => 'group_title',
+      2 => 'group_link_styles',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -108,6 +172,64 @@ function stanford_landing_page_field_group_info() {
     ),
   );
   $export['group_numbered_guide|field_collection_item|field_landing_page_item|numbered_guide'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_related_content|node|stanford_landing_page|form';
+  $field_group->group_name = 'group_related_content';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_landing_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Tag with Related Content',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_related_content',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Tag with Related Content',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => 'group-related-content field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $export['group_related_content|node|stanford_landing_page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_banner_details|node|stanford_landing_page|form';
+  $field_group->group_name = 'group_s_banner_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_landing_page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Banner details',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_s_program_service_image',
+      1 => 'field_s_program_service_subtitle',
+      2 => 'field_hide_title',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Banner details',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $export['group_s_banner_details|node|stanford_landing_page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -186,14 +308,15 @@ function stanford_landing_page_field_group_info() {
     'children' => array(
       0 => 'field_s_lp_item_description',
       1 => 'field_s_lp_item_image',
-      2 => 'field_s_lp_item_title',
-      3 => 'group_s_more_link_style',
+      2 => 'group_s_more_link_style',
+      3 => 'group_title_styles',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Block Style',
       'instance_settings' => array(
-        'classes' => 'well',
+        'id' => '',
+        'classes' => 'block',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -283,8 +406,8 @@ function stanford_landing_page_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_s_lp_item_description',
-      1 => 'field_s_lp_item_title',
-      2 => 'group_s_more_link_style',
+      1 => 'group_s_more_link_style',
+      2 => 'group_title_styles',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -345,7 +468,7 @@ function stanford_landing_page_field_group_info() {
   $field_group->parent_name = 'group_s_block_style';
   $field_group->data = array(
     'label' => 'More LInk Style',
-    'weight' => '5',
+    'weight' => '8',
     'children' => array(
       0 => 'field_s_lp_item_link',
     ),
@@ -376,7 +499,7 @@ function stanford_landing_page_field_group_info() {
   $field_group->parent_name = 'group_s_callout_style';
   $field_group->data = array(
     'label' => 'More Link Style',
-    'weight' => '10',
+    'weight' => '11',
     'children' => array(
       0 => 'field_s_lp_item_link',
     ),
@@ -408,7 +531,7 @@ function stanford_landing_page_field_group_info() {
   $field_group->parent_name = 'group_s_postcard_content';
   $field_group->data = array(
     'label' => 'Link Style',
-    'weight' => '9',
+    'weight' => '17',
     'children' => array(
       0 => 'field_s_lp_item_link',
     ),
@@ -442,8 +565,8 @@ function stanford_landing_page_field_group_info() {
     'weight' => '12',
     'children' => array(
       0 => 'field_s_lp_item_description',
-      1 => 'field_s_lp_item_title',
-      2 => 'group_s_more_link_style',
+      1 => 'group_s_more_link_style',
+      2 => 'group_title_styles',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -537,20 +660,16 @@ function stanford_landing_page_field_group_info() {
     'label' => 'Card Link Style',
     'weight' => '13',
     'children' => array(
-      0 => 'field_s_lp_item_image',
-      1 => 'field_s_lp_item_title',
+      0 => 'field_s_lp_item_description',
+      1 => 'field_s_lp_item_image',
+      2 => 'field_s_lp_item_title',
     ),
-    'format_type' => 'div',
+    'format_type' => 'link',
     'format_settings' => array(
       'label' => 'Card Link Style',
       'instance_settings' => array(
-        'id' => '',
+        'link_to' => 'field_s_lp_item_link',
         'classes' => 'tile-link',
-        'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
       ),
       'formatter' => 'open',
     ),
@@ -570,15 +689,14 @@ function stanford_landing_page_field_group_info() {
     'label' => 'Card Style',
     'weight' => '0',
     'children' => array(
-      0 => 'field_s_lp_item_description',
-      1 => 'group_s_tile_link_style',
+      0 => 'group_s_tile_link_style',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Card Style',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'tile',
+        'classes' => 'tile column',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -589,6 +707,93 @@ function stanford_landing_page_field_group_info() {
     ),
   );
   $export['group_tile_style|field_collection_item|field_landing_page_item|large_landscape'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_title_styles|field_collection_item|field_landing_page_item|stanford_4_col_header';
+  $field_group->group_name = 'group_title_styles';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_landing_page_item';
+  $field_group->mode = 'stanford_4_col_header';
+  $field_group->parent_name = 'group_s_block_style';
+  $field_group->data = array(
+    'label' => 'Title Styles',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_s_lp_item_title',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Title Styles',
+      'instance_settings' => array(
+        'classes' => '',
+        'element' => 'h2',
+        'show_label' => '0',
+        'label_element' => 'Header 2',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $export['group_title_styles|field_collection_item|field_landing_page_item|stanford_4_col_header'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_title_styles|field_collection_item|field_landing_page_item|stanford_callout_block';
+  $field_group->group_name = 'group_title_styles';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_landing_page_item';
+  $field_group->mode = 'stanford_callout_block';
+  $field_group->parent_name = 'group_s_callout_style';
+  $field_group->data = array(
+    'label' => 'Title Styles',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_s_lp_item_title',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Title Styles',
+      'instance_settings' => array(
+        'classes' => '',
+        'element' => 'h2',
+        'show_label' => '0',
+        'label_element' => 'Header 2',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $export['group_title_styles|field_collection_item|field_landing_page_item|stanford_callout_block'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_title_styles|field_collection_item|field_landing_page_item|stanford_medium_square';
+  $field_group->group_name = 'group_title_styles';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_landing_page_item';
+  $field_group->mode = 'stanford_medium_square';
+  $field_group->parent_name = 'group_s_postcard_content';
+  $field_group->data = array(
+    'label' => 'Title Styles',
+    'weight' => '15',
+    'children' => array(
+      0 => 'field_s_lp_item_title',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Title Styles',
+      'instance_settings' => array(
+        'classes' => '',
+        'element' => 'h2',
+        'show_label' => '0',
+        'label_element' => 'Header 2',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $export['group_title_styles|field_collection_item|field_landing_page_item|stanford_medium_square'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -610,9 +815,9 @@ function stanford_landing_page_field_group_info() {
       'label' => 'Title Style',
       'instance_settings' => array(
         'classes' => '',
-        'element' => 'h3',
+        'element' => 'h2',
         'show_label' => '0',
-        'label_element' => 'Header 3',
+        'label_element' => 'Header 2',
         'attributes' => '',
       ),
     ),

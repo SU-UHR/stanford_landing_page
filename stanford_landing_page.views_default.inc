@@ -42,7 +42,6 @@ function stanford_landing_page_views_default_views() {
     'field_s_image_info' => 'field_s_image_info',
     'title' => 'title',
     'field_s_landing_page_layout' => 'field_s_landing_page_layout',
-    'timestamp' => 'title',
     'status' => 'status',
     'changed' => 'changed',
     'name' => 'name',
@@ -75,11 +74,6 @@ function stanford_landing_page_views_default_views() {
     'field_s_landing_page_layout' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'timestamp' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -379,6 +373,42 @@ function stanford_landing_page_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'menu-manage-content-by-type';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $translatables['landing_page_manage'] = array(
+    t('Master'),
+    t('Manage Landing Page'),
+    t('more'),
+    t('Filter'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('field collection item from field_s_image_info'),
+    t('author'),
+    t('Content'),
+    t('- Choose an operation -'),
+    t('Delete'),
+    t('Modify'),
+    t('Publish'),
+    t('Unpublish'),
+    t('Image'),
+    t('Title'),
+    t('Layout'),
+    t('Published'),
+    t('Updated date'),
+    t('Author'),
+    t('Node ID'),
+    t('Actions'),
+    t('Link'),
+    t('Delete link'),
+    t('Page'),
+  );
   $export['landing_page_manage'] = $view;
 
   return $export;

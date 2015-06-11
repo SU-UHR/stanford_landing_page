@@ -34,7 +34,7 @@ function stanford_landing_page_node_info() {
     'stanford_landing_page' => array(
       'name' => t('Landing Page'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Cardinal at Work Landing Page'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
